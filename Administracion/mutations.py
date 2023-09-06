@@ -319,6 +319,63 @@ class ActualizarEvaluacionMutation(Mutation):
         except Exception as e:
             return ActualizarEvaluacionMutation(success=False, error=str(e))
 
+class NuevoIndicador(Mutation):
+    class Arguments:
+        indicador = graphene.String(required=True)
+        servicio = graphene.Int(required=True)        
+        unidad = graphene.Int(required=True)        
+               
+    
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, indicador, servicio, unidad):
+        try:
+            item_indicador = indicador
+            item_servicio = Servicios.objects.get(id=servicio)
+            item_unidad = Servicios.objects.get(id=unidad)
+            Indicadores.objects.create(indicador=item_indicador, servicio=item_servicio,unidad=item_unidad)            return NuevoConfiguracion(success=True, errors=None)
+        except Exception as e:
+            return NuevoIndicador(success=False, errors=str(e))
+
+
+class ActualizarIndicador(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+        indicador = graphene.String(required=False)
+        unidad = graphene.Int(required=False)
+        servicio = graphene.Int(required=False)           
+                  
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, indicador,unidad, servicio,id):
+        try:
+            item = Indicadores.objects.get(id=id)           
+            item_servicio = Servicios.objects.get(id=servicio)
+            item_unidad = UnidadM.objects.get(id=unidad)
+            item.unidad = item_unidad
+            item.servicio = item_servicio
+            item.indicador = indicador
+            item.save()
+            return ActualizarIndicador(success=True, errors=None)
+        except Exception as e:
+            return ActualizarIndicador(success=False, errors=str(e))
+
+class EliminarIndicador(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, id):
+        try:
+            item = Indicadores.objects.get(id=id)
+            item.delete()
+            return EliminarIndicador(success=True, errors=None)
+        except Exception as e:
+            return EliminarIndicador(success=False, errors=str(e))
 
 class Mutation(graphene.ObjectType):
     nuevo_deporte = NuevoDeporteMutation.Field()
@@ -339,3 +396,6 @@ class Mutation(graphene.ObjectType):
     eliminar_area = EliminarAreaMutation.Field()
     eliminar_lugar = EliminarLugarMutation.Field()
     eliminar_evaluacion = EliminarEvaluacionMutation.Field()
+    nuevoIndicador = NuevoIndicador.Field()
+    actualizarIndicador = ActualizarIndicador.Field()
+    eliminarIndicador = EliminarIndicador.Field()
