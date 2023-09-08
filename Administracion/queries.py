@@ -52,11 +52,6 @@ class UserType(DjangoObjectType):
         model = User
         fields = '__all__'
 
-class UnidadMType(DjangoObjectType):
-    class Meta:
-        model = UnidadM
-        fields = '__all__'
-        
 class IndicadoresType(DjangoObjectType):
     class Meta:
         model = Indicadores
@@ -82,7 +77,6 @@ class Query(object):
     disciplina_por_deporte = graphene.List(DisciplinaType, deporte=graphene.Int())
     area_por_departamento = graphene.List(AreaType, departamento=graphene.Int())
     servicio_por_area = graphene.List(ServicioType, area=graphene.Int())
-    unidadm = graphene.List(UnidadMType, name=graphene.String())
     indicadores = graphene.List(IndicadoresType, name=graphene.String())
 
     def resolve_user_por_nombre(self, info, name):
@@ -180,22 +174,14 @@ class Query(object):
     def resolve_all_users(self, info):
         return User.objects.all()
     
-    def resolve_unidadM(self, info, name):
-        if name == "":
-            return UnidadM.objects.all()
-        else:
-            return UnidadM.objects.filter(
-                Q(nombre__icontains=name) | Q(simbolo__icontains=name) | Q(magnitud__icontains=name)
-
-            )
-            
+                
     def resolve_indicadores(self, info, name):
         if name == "":
             return Indicadores.objects.all()
         else:
             return Indicadores.objects.filter(
                 Q(indicador__icontains=name) |
-                Q(unidad__nombre__icontains=name) |
+                Q(unidad__icontains=name) |
                 Q(servicio__nombre__icontains=name)
 
             )

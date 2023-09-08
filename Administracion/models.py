@@ -35,26 +35,13 @@ class Servicios(models.Model):
 
     def __str__(self):
         return self.nombre
-
-"""
-Codificador de unidad de medidas, las magnitudes que se manejen ancladas desde el front
-"""
-class UnidadM(models.Model):
-    nombre = models.CharField(max_length=100)
-    simbolo = models.CharField(max_length=10)
-    """ Anclar en el front, en base de datos solo guardas una letra Longitud L,
-    Ángulo plano A,Peso Pe, Resistencia eléctrica RE, Porciento P"""
-    magnitud = models.CharField(max_length=10)
-    
-
-    def __str__(self):
-        return self.nombre
 """"
 Indicadores que se miden en las pruebas que se realizan
 """
 class Indicadores(models.Model):
     indicador = models.CharField(max_length=250)
-    unidad = models.ForeignKey(UnidadM, on_delete=PROTECT, blank=True, null=True)
+    unidad = models.CharField(max_length=250)
+    
     """
         Prueba a la que pertenece el indicador
     """

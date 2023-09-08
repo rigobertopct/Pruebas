@@ -1,0 +1,732 @@
+[
+    {
+      "pk": "1",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Alineación horizontal de la cabeza",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "2",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Alineación horizontal de los acromiones",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "3",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Alineación horizontal de las EIAS",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "4",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Ángulo entre los dos acromiones y las dos EIAS",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "5",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Ángulo frontal del miembro inferior derecho",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "6",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Ángulo frontal del miembro inferior izquierdo",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "7",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Diferencia de longitud de los miembros inferiores (D-E)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "8",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Alineación horizontal de las tuberosidades tibiales",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "9",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Ángulo Q derecho",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "10",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista anterior/Ángulo Q izquierdo",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "11",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista Posterior/Asimetría horizontal de la escápula en relación a T3",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "12",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista Posterior/Ángulo pierna derecha/pie trasero",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "13",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista Posterior/Ángulo pierna izquierda/retropié",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "14",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Alineación horizontal de la cabeza (C7)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "15",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Alineación vertical de la cabeza (acromion)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "16",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Alineación vertical del tronco",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "17",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Ángulo de la cadera (torso y muslo)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "18",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Alineación vertical del cuerpo",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "19",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Alineación horizontal de la pelvis",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "20",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Ángulo de la rodilla",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "21",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista lateral derecha/Ángulo del tobillo",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "22",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/Alineación horizontal de la cabeza (C7)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "23",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/Alineación vertical de la cabeza (acromion)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "24",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/Alineación vertical del tronco",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "25",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/Ángulo de la cadera (torso y muslo)",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "26",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/Alineación vertical del cuerpo",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "27",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/Alineación horizontal de la pelvis",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "28",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/ángulo de la rodilla",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "29",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Vista del lado izquierdo/ángulo del tobillo",
+        "unidad": "º",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "30",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Perimetría /Brazo Relajado",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "31",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Perimetría/Brazo Contraído",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "32",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Perimetría/Antebrazo",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "33",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Perimetría/Muslo 1cm del gluteo",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "34",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Perimetría/Muslo medio",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+      "pk": "35",
+      "model": "Administracion.Indicadores",
+      "fields": {
+        "indicador": "Perimetría/Pantorrilla máxima",
+        "unidad": "cm",
+        "servicio": "1"
+      }
+    },
+    {
+        "pk": "36",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Circunferencia Abdominal",
+          "unidad": "cm",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "37",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Estatura",
+          "unidad": "cm",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "38",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Resistencia (R)",
+          "unidad": "Ὠ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "39",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Reactancia (Xc)",
+          "unidad": "Ὠ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "40",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Ángulo de fase (Pha)",
+          "unidad": "o",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "41",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Indice de Masa Corporal IMC",
+          "unidad": "",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "42",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Masa grasa (FM)",
+          "unidad": "kg",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "43",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "% Masa Grasa",
+          "unidad": " (%)*",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "44",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Masa Libre de Grasa (FFM)",
+          "unidad": "kg",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "45",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "% FFM",
+          "unidad": " (%)*",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "46",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Índice AKS",
+          "unidad": "",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "47",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Índice de masa grasa",
+          "unidad": "kg/m2",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "48",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Índice de masa libre de grasa",
+          "unidad": "kg/m2",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "49",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Indice Cintura/Talla",
+          "unidad": "",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "50",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Agua corporal total (TBW)",
+          "unidad": "1L ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "51",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "% TBW",
+          "unidad": "(%)*",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "52",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Agua extracelular (ECW)",
+          "unidad": "L ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "53",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "% ECW",
+          "unidad": " (%)**",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "54",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Agua Intracelular (ICW)",
+          "unidad": "L ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "55",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": " % ICW**",
+          "unidad": " (%)**",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "56",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Hidratación (ECW/ICW)",
+          "unidad": "%",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "57",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Resistencia (Rc)",
+          "unidad": "Ὠ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "58",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Reactancia (Xcc)",
+          "unidad": "Ὠ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "59",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Impedencia (Z)",
+          "unidad": "Ὠ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "60",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Impedencia (Zc)",
+          "unidad": "Ὠ",
+          "servicio": "2"
+        }
+      },
+      {
+        "pk": "61",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Indice de resistencia",
+          "unidad": "cm2/ohm",
+          "servicio": "2"
+        }
+      },
+      
+    {
+        "pk": "62",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Duración total del esfuerzo",
+          "unidad": "min",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "63",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Frecuencia cardiaca máxima",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "64",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Tensión arterial",
+          "unidad": "mmHg",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "65",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "D producto",
+          "unidad": "",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "66",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "VO2 max",
+          "unidad": "L/min",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "67",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "VO2 max Relativo",
+          "unidad": "ml/min/kg",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "68",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Rendimiento energético ",
+          "unidad": "METs",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "69",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Evaluación Capacidad Funcional",
+          "unidad": "",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "70",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Evaluación miocárdica",
+          "unidad": "",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "71",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Máxima depresión ST en máximo esfuerzo",
+          "unidad": "mV en V1",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "72",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Pendiente ",
+          "unidad": "mV/s",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "73",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Máxima elevación ST en máximo esfuerzo",
+          "unidad": "mV en V2",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "74",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Pendiente ",
+          "unidad": "mV/s",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "75",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Variación ST/FC",
+          "unidad": "",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "76",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Pulso de entrenamiento al 70 %",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "77",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Pulso de entrenamiento al 80 %",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "78",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Pulso de entrenamiento al 90 %",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "79",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Frecuencia cardiaca de recuperación 1er minuto",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "80",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Frecuencia cardiaca de recuperación 3er minuto",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      },
+      {
+        "pk": "81",
+        "model": "Administracion.Indicadores",
+        "fields": {
+          "indicador": "Frecuencia cardiaca de recuperación 5to minuto",
+          "unidad": "PPM",
+          "servicio": "3"
+        }
+      }
+  ]
