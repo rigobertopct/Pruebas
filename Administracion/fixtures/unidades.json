@@ -1,0 +1,48 @@
+[
+    {
+        "pk": "1",
+        "model": "Administracion.UnidadM",
+        "fields": {
+            "nombre": "centímetro",
+            "símbolo": "cm",
+            "magnitud": "L"
+        }        
+    },
+    {
+        "pk": "2",
+        "model": "Administracion.UnidadM",
+        "fields": {
+            "nombre": "grado",
+            "símbolo": "°",
+            "magnitud": "A"
+        }        
+    },
+    {
+        "pk": "3",
+        "model": "Administracion.UnidadM",
+        "fields": {
+            "nombre": "kilogramo",
+            "símbolo": "kg",
+            "magnitud": "Pe"
+        }        
+    },
+    {
+        "pk": "4",
+        "model": "Administracion.UnidadM",
+        "fields": {
+            "nombre": "omega",
+            "símbolo": "Ω",
+            "magnitud": "RE"
+        }        
+    },
+    {
+        "pk": "5    ",
+        "model": "Administracion.UnidadM",
+        "fields": {
+            "nombre": "porciento",
+            "símbolo": "%",
+            "magnitud": "P"
+        }        
+    }
+    
+]

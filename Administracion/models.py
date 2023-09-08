@@ -16,7 +16,7 @@ class Departamento(models.Model):
 
 class Area(models.Model):
     nombre = models.CharField(max_length=100)
-    sigla = models.CharField(max_length=3)
+    sigla = models.CharField(max_length=10)
     isActivo = models.BooleanField(default=True)
     responsable = models.ForeignKey(User, on_delete=PROTECT)
     departamento = models.ForeignKey(Departamento, on_delete=PROTECT, blank=True, null=True)
@@ -37,19 +37,20 @@ class Servicios(models.Model):
         return self.nombre
 
 """
-Codificador de unidad de medidas, las magnitudes que se manejen ancladas desde el front(longitud,
-tiempo,masa,)
+Codificador de unidad de medidas, las magnitudes que se manejen ancladas desde el front
 """
 class UnidadM(models.Model):
     nombre = models.CharField(max_length=100)
     simbolo = models.CharField(max_length=10)
+    """ Anclar en el front, en base de datos solo guardas una letra Longitud L,
+    Ángulo plano A,Peso Pe, Resistencia eléctrica RE, Porciento P"""
     magnitud = models.CharField(max_length=10)
     
 
     def __str__(self):
         return self.nombre
 """"
-Indicadores que miden en las pruebas que se realizan
+Indicadores que se miden en las pruebas que se realizan
 """
 class Indicadores(models.Model):
     indicador = models.CharField(max_length=250)

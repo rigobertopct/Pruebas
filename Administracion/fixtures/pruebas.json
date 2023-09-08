@@ -1,0 +1,63 @@
+[
+    {
+        "pk": "1",
+        "model": "Administracion.Servicios",
+        "fields": {
+            "nombre": "Estudio postural",
+            "simbolo": "SAPO",
+            "objetivo": "Detectar trastornos posturales",
+            "area": "1"
+           
+        }        
+    },
+    {
+        "pk": "2",
+        "model": "Administracion.Servicios",
+        "fields": {
+            "nombre": "Bioimpedancia eléctrica",
+            "simbolo": "BIA",
+            "objetivo": "Estudio de la composición corporal",
+            "area": "1"
+        }        
+    },
+    {
+        "pk": "3",
+        "model": "Administracion.Servicios",
+        "fields": {
+            "nombre": "Ergoespirometría gesto-específica de laboratorio",
+            "simbolo": "EEML",
+            "objetivo": "Capacidad funcional del sistema  cardiorrespiratorio",
+            "area": "4"
+        }       
+    },
+    {
+        "pk": "4",
+        "model": "Administracion.Servicios",
+        "fields": {
+            "nombre": "Potencia de Miembros Inferiores",
+            "simbolo": "PMI",
+            "objetivo": "Capacidad de salto",
+            "area": "2"
+        }       
+    },
+    {
+        "pk": "5",
+        "model": "Administracion.Servicios",
+        "fields": {
+            "nombre": "Test de Stroop",
+            "simbolo": "STP",
+            "objetivo": "Estudio de interferencia de los procesos automáticos en los procesos controlados",
+            "area": "3"
+        }       
+    },
+    {
+        "pk": "6",
+        "model": "Administracion.Servicios",
+        "fields": {
+            "nombre": "Lateralidad motora",
+            "simbolo": "LAT",
+            "objetivo": "Determinar patrones de lateralidad motora",
+            "area": "5"
+        }       
+    }
+]

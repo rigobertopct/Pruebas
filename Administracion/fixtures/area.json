@@ -1,0 +1,57 @@
+[
+    {
+        "pk": "1",
+        "model": "Administracion.Area",
+        "fields": {
+            "nombre": "Antropología Funcional",
+            "sigla": "AF",
+            "isActivo": true,
+            "responsable": "2",
+            "departamento":"1"
+        }        
+    },
+    {
+        "pk": "2",
+        "model": "Administracion.Area",
+        "fields": {
+            "nombre": "Biomecánica",
+            "sigla": "B",
+            "isActivo": true,
+            "responsable": "2",
+            "departamento": "1"
+        }        
+    },
+    {
+        "pk": "3",
+        "model": "Administracion.Area",
+        "fields": {
+            "nombre": "Neurociencias",
+            "sigla": "N",
+            "isActivo": true,
+            "responsable": "2",
+            "departamento": "1"
+        }       
+    },
+    {
+        "pk": "4",
+        "model": "Administracion.Area",
+        "fields": {
+            "nombre": "Prueba de Esfuerzo",
+            "sigla": "PE",
+            "isActivo": true,
+            "responsable": "2",
+            "departamento": "1"
+        }       
+    },
+    {
+        "pk": "5",
+        "model": "Administracion.Area",
+        "fields": {
+            "nombre": "Entrenamiento y resultados",
+            "sigla": "ER",
+            "isActivo": true,
+            "responsable": "2",
+            "departamento": "1"
+        }       
+    }
+]

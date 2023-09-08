@@ -333,8 +333,9 @@ class NuevoIndicador(Mutation):
         try:
             item_indicador = indicador
             item_servicio = Servicios.objects.get(id=servicio)
-            item_unidad = Servicios.objects.get(id=unidad)
-            Indicadores.objects.create(indicador=item_indicador, servicio=item_servicio,unidad=item_unidad)            return NuevoConfiguracion(success=True, errors=None)
+            item_unidad = UnidadM.objects.get(id=unidad)
+            Indicadores.objects.create(indicador=item_indicador, servicio=item_servicio,unidad=item_unidad) 
+            return NuevoIndicador(success=True, errors=None)
         except Exception as e:
             return NuevoIndicador(success=False, errors=str(e))
 

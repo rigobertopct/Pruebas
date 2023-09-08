@@ -1,0 +1,32 @@
+[
+    {
+        "pk": "1",
+        "model": "Administracion.Departamento",
+        "fields": {
+            "nombre": "Ciencias Aplicadas",
+            "sigla": "CA",
+            "isActivo": true
+        }
+        
+    },
+    {
+        "pk": "2",
+        "model": "Administracion.Departamento",
+        "fields": {
+            "nombre": "Ciencias del Entrenamiento",
+            "sigla": "CE",
+            "isActivo": true
+        }
+        
+    },
+    {
+        "pk": "3",
+        "model": "Administracion.Departamento",
+        "fields": {
+            "nombre": "Economía",
+            "sigla": "E",
+            "isActivo": true
+        }
+        
+    }
+]

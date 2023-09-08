@@ -1,0 +1,20 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$RqMHGwkOQTfM9O80IqT6QF$gb/sLnVT/eqErAZb3S6xu8k9wwSSmdlYawPuVq1rAoY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "alfredo.quintana",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-09-07T03:53:46.811Z",
+            "groups": [],
+            "user_permissions": [] 
+        }
+    }
+]
