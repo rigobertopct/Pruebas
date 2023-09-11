@@ -1,5 +1,4 @@
 import graphene
-from django.contrib.auth.models import User
 from graphene import Mutation
 
 from .models import *
@@ -339,7 +338,6 @@ class NuevoIndicador(Mutation):
         except Exception as e:
             return NuevoIndicador(success=False, errors=str(e))
 
-
 class ActualizarIndicador(Mutation):
     class Arguments:
         id = graphene.Int(required=True)
@@ -377,6 +375,67 @@ class EliminarIndicador(Mutation):
         except Exception as e:
             return EliminarIndicador(success=False, errors=str(e))
 
+
+class NuevoServicio(Mutation):
+    class Arguments:
+        nombre = graphene.String()
+        simbolo = graphene.String()
+        objetivo = graphene.String()
+        area = graphene.Int()
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, nombre, simbolo, objetivo, area):
+        try:
+            item_area = Area.objects.get(id=area)
+            Servicios.objects.create(nombre=nombre, simbolo=simbolo, objetivo=objetivo, area=item_area)
+            return NuevoServicio(success=True, errors=None)
+        except Exception as e:
+            return NuevoServicio(success=False, errors=str(e))
+
+
+class ActualizarServicio(Mutation):
+    class Arguments:
+        nombre = graphene.String()
+        simbolo = graphene.String()
+        objetivo = graphene.String()
+        area = graphene.Int()
+        id = graphene.Int()
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, nombre, simbolo, objetivo, area, id):
+        try:
+            item_area = Area.objects.get(id=area)
+            item = Servicios.objects.get(id=id)
+            item.nombre = nombre
+            item.simbolo = simbolo
+            item.objetivo = objetivo
+            item.area = item_area
+            item.save()
+            return ActualizarServicio(success=True, errors=None)
+        except Exception as e:
+            return ActualizarServicio(success=False, errors=str(e))
+
+
+class EliminarServicio(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, id):
+        try:
+            item = Servicios.objects.get(id=id)
+            item.delete()
+            return EliminarServicio(success=True, errors=None)
+        except Exception as e:
+            return EliminarServicio(success=False, errors=str(e))
+
+
 class Mutation(graphene.ObjectType):
     nuevo_deporte = NuevoDeporteMutation.Field()
     nueva_disciplina = NuevaDisciplinaMutation.Field()
@@ -399,3 +458,6 @@ class Mutation(graphene.ObjectType):
     nuevoIndicador = NuevoIndicador.Field()
     actualizarIndicador = ActualizarIndicador.Field()
     eliminarIndicador = EliminarIndicador.Field()
+    nuevoServicio = NuevoServicio.Field()
+    actualizarServicio = ActualizarServicio.Field()
+    eliminarServicio = EliminarServicio.Field()
