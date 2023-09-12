@@ -405,21 +405,7 @@ class ActualizarServicio(Mutation):
 
     success = graphene.Boolean()
     errors = graphene.String()
-
-    def mutate(self, info, nombre, simbolo, objetivo, area, id):
-        try:
-            item_area = Area.objects.get(id=area)
-            item = Servicios.objects.get(id=id)
-            item.nombre = nombre
-            item.simbolo = simbolo
-            item.objetivo = objetivo
-            item.area = item_area
-            item.save()
-            return ActualizarServicio(success=True, errors=None)
-        except Exception as e:
-            return ActualizarServicio(success=False, errors=str(e))
-
-
+    
 class EliminarServicio(Mutation):
     class Arguments:
         id = graphene.Int(required=True)
@@ -434,6 +420,149 @@ class EliminarServicio(Mutation):
             return EliminarServicio(success=True, errors=None)
         except Exception as e:
             return EliminarServicio(success=False, errors=str(e))
+
+
+
+class NuevoDeportista(Mutation):
+    class Arguments:
+        nombre = graphene.String(required=True)
+        edad = graphene.Int(required=True)
+        peso = graphene.Decimal(required=True)
+        estatura = graphene.Decimal(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, nombre, edad, peso, estatura):
+        try:
+            Deportista.objects.create(nombre=nombre, edad=edad, peso=peso, estatura=estatura)
+            return NuevoDeportista(success=True, errors=None)
+        except Exception as e:
+            return NuevoDeportista(success=False, errors=str(e))
+
+
+class ActualizarDeportista(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+        nombre = graphene.String(required=True)
+        edad = graphene.Int(required=True)
+        peso = graphene.Decimal(required=True)
+        estatura = graphene.Decimal(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, nombre, edad, peso, estatura, id):
+        try:
+            item = Deportista.objects.get(id=id)
+            item.nombre = nombre
+            item.edad = edad
+            item.peso = peso
+            item.estatura = estatura
+            item.save()
+            return ActualizarDeportista(success=True, errors=None)
+        except Exception as e:
+            return ActualizarDeportista(success=False, errors=str(e))
+
+
+class EliminarDeportista(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, id):
+        try:
+            item = Deportista.objects.get(id=id)
+            item.delete()
+            return EliminarDeportista(success=True, errors=None)
+        except Exception as e:
+            return EliminarDeportista(success=False, errors=str(e))
+
+class NuevaPrueba(Mutation):
+    class Arguments:
+        fecha = graphene.Date(required=True)
+        deporte = graphene.Int(required=True)
+        deportista = graphene.Int(required=True)
+        servicio = graphene.Int(required=True)
+        lugar = graphene.Int(required=True)
+        evaluacion = graphene.Int(required=False)
+        resultado = graphene.String(required=True)
+        observaciones = graphene.String(required=True)
+        valoracion = graphene.String(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, fecha, deporte, deportista, servicio, lugar,
+               evaluacion, resultado, observaciones, valoracion):
+        try:
+            Prueba.objects.create(fecha=fecha,
+                                  deporte=deporte, deportista=deportista,
+                                  servicio=servicio,lugar=lugar,
+                                  evaluacion=evaluacion,observaciones=observaciones,
+                                  valoracion=valoracion, resultado=resultado)
+            return NuevaPrueba(success=True, errors=None)
+        except Exception as e:
+            return NuevaPrueba(success=False, errors=str(e))
+
+
+class ActualizarPrueba(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+        fecha = graphene.Date(required=True)
+        deporte = graphene.Int(required=True)
+        deportista = graphene.Int(required=True)
+        lugar = graphene.Int(required=True)
+        servicio = graphene.Int(required=True)
+        evaluacion = graphene.Int(required=True)
+        observaciones = graphene.String(required=False)
+        valoracion = graphene.String(required=False)
+        resultado = graphene.String(required=False)
+
+    success = graphene.Boolean() 
+    errors = graphene.String()
+
+    def mutate(self, info, fecha, deporte, deportista, lugar,
+               servicio, evaluacion, observaciones, valoracion, resultado,id):
+        try:
+            item = Prueba.objects.get(id=id)
+            item_deporte = Deporte.objects.get(id=deporte)
+            item_deportista = Deportista.objects.get(id=deportista)
+            item_lugar = Lugar.objects.get(id=lugar)
+            item_servicio = Servicios.objects.get(id=servicio)
+            item_evaluacion = Evaluacion.objects.get(id=evaluacion)
+            item.fecha = fecha
+            item.deporte = item_deporte
+            item.deportista = item_deportista
+            item.lugar = item_lugar
+            item.servicio = item_servicio
+            item.evaluacion = item_evaluacion
+            item.observaciones = observaciones
+            item.valoracion = valoracion
+            item.resultado = resultado
+            item.save()
+            return ActualizarPrueba(success=True, errors=None)
+        except Exception as e:
+            return ActualizarPrueba(success=False, errors=str(e))
+
+
+class EliminarPrueba(Mutation):
+    class Arguments:
+        id = graphene.Int(required=True)
+
+    success = graphene.Boolean()
+    errors = graphene.String()
+
+    def mutate(self, info, id):
+        try:
+            item = Prueba.objects.get(id=id)
+            item.delete()
+            return EliminarPrueba(success=True, errors=None)
+        except Exception as e:
+            return EliminarPrueba(success=False, errors=str(e))
+
 
 
 class Mutation(graphene.ObjectType):
@@ -461,3 +590,10 @@ class Mutation(graphene.ObjectType):
     nuevoServicio = NuevoServicio.Field()
     actualizarServicio = ActualizarServicio.Field()
     eliminarServicio = EliminarServicio.Field()
+    nuevoDeportista = NuevoDeportista.Field()
+    actualizarDeportista = ActualizarDeportista.Field()
+    eliminarDeportista = EliminarDeportista.Field()
+    nuevaPrueba = NuevaPrueba.Field()
+    actualizarPrueba = ActualizarPrueba.Field()
+    eliminarPrueba = EliminarPrueba.Field()
+
